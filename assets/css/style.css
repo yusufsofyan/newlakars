@@ -325,6 +325,10 @@ section{
   padding-bottom: 5rem;
 }
 
+.howto{
+  padding-bottom: 5rem;
+}
+
 .order-container{
   display: flex;
   justify-content: space-evenly;
@@ -376,6 +380,64 @@ section{
   margin: 0;
 }
 
+.howto h5{
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer{
+  background-color: var(--biru);
+  display: flex;
+  /* padding-bottom: 1rem; */
+  padding-top: 2rem;
+}
+
+.footer{
+  font-size: .5rem;
+}
+
+.footer p a{
+  text-decoration: none;
+  color: white;
+}
+
+.action-one{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.action-two{
+  width: 20%;
+  display: none;
+  float: right;
+}
+
+.social-media{
+  margin-left: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.social-media img{
+  width: 5%;
+  min-width: 50px;
+  margin-right: 2rem;
+}
+
+.social-media img:last-child{
+  margin-right: 0;
+}
+
+.diver{
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 
@@ -385,6 +447,32 @@ section{
   
   .galery img{
     max-width: 250px;
+  }
+
+  .action-one{
+    display: inline-block;
+    width: 40%;
+  }
+
+  .action-two{
+    width: 20%;
+    display: inline-block;
+    float: right;
+  }
+
+  .social-media{
+    display: flex;
+    margin-left: 0rem;
+    margin-top: .5rem;
+    width: 100%;
+    /* align-items: flex-end; */
+    justify-content: flex-end;
+  }
+
+  .social-media img{
+    width: 5%;
+    min-width: 20px;
+    margin-right: 1rem;
   }
 }
 
@@ -439,6 +527,16 @@ section{
 
   .btn-main{
     font-size: 1.25rem;
+  }
+
+  .social-media{
+    margin-top: 1rem;
+  }
+
+  .social-media img{
+    width: 10%;
+    min-width: 30px;
+    margin-right: 1rem;
   }
 
 }
