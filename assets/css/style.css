@@ -187,6 +187,11 @@ header{
   background-image: url('../img/background.png');
 }
 
+.show{
+  opacity: 1 !important;
+  transform: translate(0,0) !important;
+}
+
 .main{
   display: flex;
   flex-direction: column-reverse;
@@ -199,6 +204,9 @@ header{
   justify-content: center;
   margin-left: 1rem;
   margin-right: 1rem;
+  opacity: 0;
+  transition: 1s ease;
+  transform: translate(0,50px);
 }
 
 .btn-main{
@@ -247,6 +255,9 @@ section{
   width: 15%;
   min-width: 140px;
   height: auto;
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translateX(200px);
 }
 
 .product{
@@ -270,6 +281,9 @@ section{
   width: 80%;
   max-width: 200px;
   border: solid white .75rem;
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translateY(200px);
 }
 
 .testimoni{
@@ -295,6 +309,12 @@ section{
   margin-right: 1rem;
   margin-top: 70px;
   padding-bottom: 2rem;
+}
+
+.testi-container .testi-card{
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translateX(200px);
 }
 
 .kutip{
@@ -341,6 +361,12 @@ section{
   align-items: center;
   width: 100%;
   max-width: 221px;
+}
+
+.order-container .order-card{
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translateY(200px);
 }
 
 .order-head{
@@ -473,6 +499,10 @@ section{
     width: 5%;
     min-width: 20px;
     margin-right: 1rem;
+  }
+
+  .footer{
+    font-size: .7rem;
   }
 }
 
