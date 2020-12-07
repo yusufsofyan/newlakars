@@ -1,0 +1,436 @@
+:root{
+  --biru: #003C85;
+  --merah: #E62129;
+  --kuning: #FEC52B;
+  --abu: #F3F3F3;
+
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: "LakarsHelvetica";
+  src: url("../fonts/HelveticaNeuBold.ttf");
+}
+
+@font-face {
+  font-family: "LakarsMomentum";
+  src: url("../fonts/MonumentExtended-Regular.otf");
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+body::-webkit-scrollbar{
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track{
+  background-color: white;
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: var(--biru);
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+.bg-merah{
+  background-color: var(--merah);
+}
+
+.t-biru{
+  color: var(--biru) !important;
+}
+
+.container-fluid{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+nav{
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar{
+  background-color: white;
+  height: 3.75rem;
+  transition: 800ms ease;
+}
+
+.logo{
+  min-width: 100px;
+  width: 15%;
+}
+
+.logo-menu{
+  margin-top: 1rem;
+  margin-left: 1rem;
+  z-index: 1;
+  width: 30%;
+  min-width: 120px;
+  max-width: 150px;
+}
+
+.nav-link{
+  font-size: 1.25rem;
+  margin-right: 3.75rem;
+}
+
+.nav-link:last-child{
+  margin-right: 0rem;
+}
+
+.navbar a{
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'LakarsHelvetica';
+}
+
+.navbar-nav{
+  margin-left: 1rem;
+  padding-top: 3.75rem;
+}
+
+.menu-toggle{
+  display: flex;
+  flex-direction: column;
+  height: 1rem;
+  justify-content: space-between;
+  margin-left: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-toggle span{
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 50px;
+  background-color: var(--biru);
+  transition: all 0.5s ease;
+}
+
+.menu-toggle input{
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  opacity: 0;
+  left: -6px;
+  top: -5px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-toggle span:last-child{
+  margin-left: auto;
+  width: 20px;
+}
+
+.menu-toggle span:nth-child(2){
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+  transform: rotate(45deg) translate(-1px, -3px);
+  background-color: white;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+  transform: rotate(-45deg) translate(-1px, 3px);
+  background-color: white;
+  width: 28px;
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+  transform: scale(0);
+  opacity: 0;
+}
+
+.menu{
+  background-color: var(--biru);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  height: 100vh;
+  width: 100%;
+  transform: translateX(100%);
+  transition: all 500ms ease;
+  opacity: 0;
+}
+
+.slide{
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+header{
+  display: block;
+  height: auto;
+  background-image: url('../img/background.png');
+}
+
+.main{
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 4rem;
+}
+
+.head-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.btn-main{
+  font-family: 'LakarsMomentum';
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  background-color: var(--merah);
+  margin-top: 2.5rem;
+  outline: none;
+  border: none;
+  transition: all 500ms ease;
+}
+
+.btn-main:hover{
+  color: white;
+  box-shadow: 0px 0px 20px 3px rgba(230, 33, 41, 0.35);
+}
+
+.btn-main:focus{
+  box-shadow: 0px 0px 0px 0pxs rgba(230, 33, 41, 0.35);
+}
+
+section{
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+}
+
+.tittle{
+  font-family: 'LakarsMomentum';
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.about-plus{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.about-plus img{
+  margin-top: 4rem;
+  width: 15%;
+  min-width: 140px;
+  height: auto;
+}
+
+.product{
+  background-color: var(--biru);
+  padding-bottom: 5rem;
+}
+
+.galery{
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.galery img{
+  margin-bottom: 2.5rem;
+  width: 80%;
+  max-width: 200px;
+  border: solid white .75rem;
+}
+
+.testimoni{
+  padding-bottom: 5rem;
+}
+
+.testi-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.testi-card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 245px;
+  /* height: 500px; */
+  background-color: var(--abu);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 70px;
+  padding-bottom: 2rem;
+}
+
+.kutip{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: -30px;
+}
+
+.user-pic{
+  margin-top: 70px;
+  margin-bottom: 35px;
+}
+
+.testi-card p{
+  width: 80%;
+  text-align: center;
+}
+
+.stars{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--kuning);
+}
+
+.client{
+  background-color: var(--abu);
+  padding-bottom: 5rem;
+}
+
+.order-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.order-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 221px;
+}
+
+.order-head{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.number{
+  width: 70px;
+}
+
+.redstrip{
+  display: block;
+  width: 70px;
+  height: 5px;
+}
+
+.order-body{
+  margin: 1rem;
+  margin-top: 2rem;
+  background-color: var(--abu);
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+  .btn-main{
+    font-size: 1rem;
+  }
+  
+  .galery img{
+    max-width: 250px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .btn-main{
+    font-size: 1.75rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .navbar{
+    height: 5rem;
+  }
+
+  .navbar a{
+    color: var(--biru);
+  }
+
+  header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .main{
+    margin-top: 5.75rem;
+    flex-direction: row;
+  }
+
+  .menu-toggle{
+    display: none;
+  }
+
+  .navbar-nav{
+    margin-left: auto;
+    padding-top: 0;
+  }
+
+  .menu{
+    display: block;
+    background-color: white;
+    position: inherit;
+    z-index: 0;
+    height: auto;
+    width: auto;
+    padding-top: 0;
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  .btn-main{
+    font-size: 1.25rem;
+  }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  
+}
