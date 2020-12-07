@@ -235,6 +235,7 @@ header{
 section{
   margin-top: 2.5rem;
   padding-top: 2.5rem;
+  overflow-x: hidden;
 }
 
 .tittle{
