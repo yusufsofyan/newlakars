@@ -67,6 +67,10 @@ nav{
   transition: 800ms ease;
 }
 
+.nav-link.active{
+  color: var(--merah) !important;
+}
+
 .logo{
   min-width: 100px;
   width: 15%;
@@ -327,6 +331,10 @@ section{
   padding-bottom: 2rem;
 }
 
+.testi-card p{
+  min-height: 240px;
+}
+
 .testi-container .testi-card{
   opacity: 0;
   transition: all 1s ease;
@@ -343,6 +351,8 @@ section{
 .user-pic{
   margin-top: 70px;
   margin-bottom: 35px;
+  width: 110px;
+  height: 110px;
 }
 
 .testi-card p{
